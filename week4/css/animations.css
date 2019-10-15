@@ -1,0 +1,128 @@
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  font-weight: bold;
+  position: relative;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+.circle1 {
+  background: PaleTurquoise;
+  -webkit-animation-timing-function: linear;
+}
+.circle2 {
+  background: salmon;
+  -webkit-animation-tming-function: ease;
+}
+.circle3 {
+  background: lightskyblue;
+  -webkit-animation-timing-function: ease-in;
+}
+.circle4 {
+  background: khaki;
+  -webkit-animation-timing-function: ease-out;
+}
+.circle5 {
+  background: mediumturquoise;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+/* Standard syntax */
+.circle1 {
+  background: PaleTurquoise;
+  animation-timing-function: linear;
+}
+.circle2 {
+  background: salmon;
+  animation-timing-function: ease;
+}
+.circle3 {
+  background: lightskyblue;
+  animation-timing-function: ease-in;
+}
+.circle4 {
+  background: khaki;
+  animation-timing-function: ease-out;
+}
+.circle5 {
+  background: mediumturquoise;
+  animation-timing-function: ease-in-out;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 300px;
+  }
+}
+
+/* Standard syntax */
+/* @keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 300px;
+  }
+} */
+
+@keyframes mymove {
+    0%   {left: 0px;}
+    25%  {left: 300px;}
+    50%  {left: 150px;}
+    75%  {left: 300px;}
+    100% {left: 0px;}
+}
+
+
+
+.cloud, .cloudshadow {
+	width: 350px; height: 120px;
+	background: #3498db;
+	border-radius: 100px;
+	position: relative;
+	margin: 150px 50px;
+}
+.cloud:after, .cloud:before, .cloudshadow:after, .cloudshadow:before {
+	content: '';
+	position: absolute;
+	background: #3498db;
+	z-index: 1
+}
+.cloudshadow, .cloudshadow:after, .cloudshadow:before {
+    margin: 0;
+    z-index: -99;
+}
+.cloud:after, .cloudshadow:after {
+	width: 100px; height: 100px;
+	top: -50px; left: 50px;
+	border-radius: 100px;
+}
+.cloud:before, .cloudshadow:before  {
+	width: 180px; height: 180px;
+	top: -90px; right: 50px;
+	border-radius: 200px;
+}
+
+
+/* add to animate cloud */
+@keyframes yourKeyframe {
+   
+}
+
+.cloud{
+	-webkit-animation: yourKeyframe ;
+	-moz-animation: yourKeyframe ;
+	animation: yourKeyframe ;
+	
+
+}
